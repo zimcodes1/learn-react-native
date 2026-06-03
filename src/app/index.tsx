@@ -1,10 +1,12 @@
-import { Platform, Text, View } from "react-native";
+import { ScrollView, Text } from "react-native";
+import HomeHeader from "../components/HomeHeader";
+import { globalStyles } from "../styles/global";
 
 export default function Index() {
 	return (
-		<View>
-			<Text>Welocme to Macrozone!</Text>
-			<Text>Running on: {Platform.OS}</Text>
-		</View>
+		<ScrollView style={globalStyles.container}>
+			<Text style={globalStyles.title}>Macrozone</Text>
+			<HomeHeader></HomeHeader>
+		</ScrollView>
 	);
 }
